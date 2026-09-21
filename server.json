@@ -14,8 +14,8 @@
     {
       "registryType": "oci",
       "registryBaseUrl": "https://ghcr.io",
-      "identifier": "ghcr.io/guycole/mellow-tapir-mcp:sha-0b4818d",
-      "version": "0.1.0",
+      "identifier": "ghcr.io/guycole/mellow-tapir-mcp:1.0.0",
+      "version": "1.0.0",
       "runtimeHint": "docker",
       "runtimeArguments": [
         {
