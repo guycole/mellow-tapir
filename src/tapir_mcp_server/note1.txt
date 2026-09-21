@@ -1,0 +1,2 @@
+Create a mcp server to support stdio and http interaction.  The mcp server is to use the sql and seed.json contained in the tapir_classifier directory.  The target database is sqlite and the database is read only. This mcp server can be deployed via docker and will be available via github container registry.   Use ollama gpt-oss:20b an a reference LLM.  Use the venv contained in the mcp directory.  mcp sources will be in the mcp directory.  Ensure PEP8 compliance.
+
