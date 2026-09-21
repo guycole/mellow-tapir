@@ -9,13 +9,13 @@
     "source": "github",
     "subfolder": "src/tapir_mcp_server"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packages": [
     {
       "registryType": "oci",
       "registryBaseUrl": "https://ghcr.io",
-      "identifier": "ghcr.io/guycole/mellow-tapir-mcp:1.0.0",
-      "version": "1.0.0",
+      "identifier": "ghcr.io/guycole/mellow-tapir-mcp:1.0.1",
+      "version": "1.0.1",
       "runtimeHint": "docker",
       "runtimeArguments": [
         {

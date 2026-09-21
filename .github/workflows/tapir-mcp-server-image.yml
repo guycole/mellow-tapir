@@ -3,6 +3,8 @@ name: Build and Publish MCP Server Image
 on:
   push:
     branches: [main]
+    tags:
+      - "v*"
     paths:
       - "src/tapir_mcp_server/**"
       - "src/tapir_schema/**"
@@ -40,6 +42,10 @@ jobs:
           images: ghcr.io/${{ github.repository_owner }}/mellow-tapir-mcp
           tags: |
             type=ref,event=branch
+            type=ref,event=tag
+            type=semver,pattern={{version}},value={{tag}}
+            type=semver,pattern={{major}}.{{minor}},value={{tag}}
+            type=semver,pattern={{major}},value={{tag}}
             type=sha
             type=raw,value=latest,enable={{is_default_branch}}
 
