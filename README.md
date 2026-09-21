@@ -2,6 +2,20 @@
 
 Mellow-Tapir is an experimental MCP server that helps radio hobbyists explore likely services, channels, and signal types across the radio spectrum from 108 MHz to 1 GHz; it is not a frequency-coordination or regulatory-authority tool.
 
+For server setup, local Ollama testing, sample MCP client sessions, and Docker usage, see [`src/tapir_mcp_server/README.md`](src/tapir_mcp_server/README.md).
+
+## Available tools
+
+The Tapir MCP server exposes the following tools:
+
+- `classify_frequency`: classify a single frequency into matching channels and likely services.
+- `query_channels`: list known channels inside a frequency range.
+- `search_services`: search service and use-name text across the catalog.
+- `execute_readonly_sql`: run read-only SQL (`SELECT` or `WITH`) against the SQLite catalog.
+- `ask_reference_model`: query a local reference LLM through Ollama, defaulting to `gpt-oss:20b`.
+
+For detailed parameters, outputs, and examples, use the tool reference in [`src/tapir_mcp_server/README.md`](src/tapir_mcp_server/README.md).
+
 ## Allocation references
 
 The [`dox/allocation`](dox/allocation) directory is a versioned archive of authoritative United States radio-frequency allocation and service references. The collection prioritizes spectrum at 30 MHz and above and is intended to support source-preserving extraction into a normalized database rather than replace the original publications.
