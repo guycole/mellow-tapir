@@ -24,7 +24,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--rebuild-db",
         action="store_true",
-        help="Rebuild SQLite database from tapir_classifier sources.",
+        help="Rebuild SQLite database from tapir_schema sources.",
     )
     return parser.parse_args()
 

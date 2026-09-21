@@ -12,8 +12,8 @@ PROJECT_ROOT = MODULE_ROOT.parent
 REPO_ROOT = PROJECT_ROOT.parent.parent.parent
 
 DEFAULT_DB_PATH = PROJECT_ROOT / "data" / "tapir.sqlite"
-DEFAULT_SEED_PATH = REPO_ROOT / "tapir_classifier" / "seed.json"
-DEFAULT_SCHEMA_PATH = REPO_ROOT / "tapir_classifier" / "schema.sql"
+DEFAULT_SEED_PATH = REPO_ROOT / "src" / "tapir_schema" / "seed.json"
+DEFAULT_SCHEMA_PATH = REPO_ROOT / "src" / "tapir_schema" / "schema.sql"
 
 
 @dataclass(frozen=True)

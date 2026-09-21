@@ -1,8 +1,8 @@
 # Tapir MCP Server
 
 This directory contains an MCP server with both stdio and streamable HTTP transports.
-The server uses data from `tapir_classifier/seed.json` and source schema text from
-`tapir_classifier/schema.sql`, then serves a read-only SQLite catalog.
+The server uses data from `src/tapir_schema/seed.json` and source schema text from
+`src/tapir_schema/schema.sql`, then serves a read-only SQLite catalog.
 
 ## Python environment
 
@@ -19,8 +19,8 @@ cd src/tapir_mcp_server
 cd /Users/gsc/github/mellow-tapir/src/tapir_mcp_server
 ./venv/bin/python -m mcp_server.build_db \
   --db-path data/tapir.sqlite \
-  --seed-path ../../tapir_classifier/seed.json \
-  --schema-path ../../tapir_classifier/schema.sql
+  --seed-path ../tapir_schema/seed.json \
+  --schema-path ../tapir_schema/schema.sql
 ```
 
 ## Run in stdio mode
@@ -28,8 +28,8 @@ cd /Users/gsc/github/mellow-tapir/src/tapir_mcp_server
 ```bash
 cd /Users/gsc/github/mellow-tapir/src/tapir_mcp_server
 TAPIR_DB_PATH=data/tapir.sqlite \
-TAPIR_SEED_PATH=../../tapir_classifier/seed.json \
-TAPIR_SCHEMA_PATH=../../tapir_classifier/schema.sql \
+TAPIR_SEED_PATH=../tapir_schema/seed.json \
+TAPIR_SCHEMA_PATH=../tapir_schema/schema.sql \
 ./venv/bin/python -m mcp_server --transport stdio
 ```
 
@@ -38,8 +38,8 @@ TAPIR_SCHEMA_PATH=../../tapir_classifier/schema.sql \
 ```bash
 cd /Users/gsc/github/mellow-tapir/src/tapir_mcp_server
 TAPIR_DB_PATH=data/tapir.sqlite \
-TAPIR_SEED_PATH=../../tapir_classifier/seed.json \
-TAPIR_SCHEMA_PATH=../../tapir_classifier/schema.sql \
+TAPIR_SEED_PATH=../tapir_schema/seed.json \
+TAPIR_SCHEMA_PATH=../tapir_schema/schema.sql \
 REFERENCE_LLM_MODEL=gpt-oss:20b \
 OLLAMA_BASE_URL=http://127.0.0.1:11434 \
 ./venv/bin/python -m mcp_server \
@@ -66,8 +66,8 @@ Run the MCP server with the same local Ollama endpoint:
 ```bash
 cd /Users/gsc/github/mellow-tapir/src/tapir_mcp_server
 TAPIR_DB_PATH=data/tapir.sqlite \
-TAPIR_SEED_PATH=../../tapir_classifier/seed.json \
-TAPIR_SCHEMA_PATH=../../tapir_classifier/schema.sql \
+TAPIR_SEED_PATH=../tapir_schema/seed.json \
+TAPIR_SCHEMA_PATH=../tapir_schema/schema.sql \
 REFERENCE_LLM_MODEL=gpt-oss:20b \
 OLLAMA_BASE_URL=http://127.0.0.1:11434 \
 ./venv/bin/python -m mcp_server --transport http --host 127.0.0.1 --port 8000 --path /mcp
@@ -115,8 +115,8 @@ images to GitHub Container Registry.
 
 The SQLite database in `data/tapir.sqlite` is generated from two source files:
 
-- `tapir_classifier/seed.json`: canonical editable catalog of bands, emissions, and channels.
-- `tapir_classifier/schema.sql`: source PostgreSQL schema retained for provenance and parity checks.
+- `src/tapir_schema/seed.json`: canonical editable catalog of bands, emissions, and channels.
+- `src/tapir_schema/schema.sql`: source PostgreSQL schema retained for provenance and parity checks.
 
 Generation is handled by `mcp_server.build_db`, which:
 
@@ -127,16 +127,16 @@ Generation is handled by `mcp_server.build_db`, which:
 
 When updating the dataset in the future:
 
-1. Edit `tapir_classifier/seed.json`.
-2. Optionally update `tapir_classifier/schema.sql` if source-schema intent changed.
+1. Edit `src/tapir_schema/seed.json`.
+2. Optionally update `src/tapir_schema/schema.sql` if source-schema intent changed.
 3. Rebuild SQLite:
 
 ```bash
 cd /Users/gsc/github/mellow-tapir/src/tapir_mcp_server
 ./venv/bin/python -m mcp_server.build_db \
   --db-path data/tapir.sqlite \
-  --seed-path ../../tapir_classifier/seed.json \
-  --schema-path ../../tapir_classifier/schema.sql
+  --seed-path ../tapir_schema/seed.json \
+  --schema-path ../tapir_schema/schema.sql
 ```
 
 4. Restart the MCP server so it uses the refreshed SQLite file.

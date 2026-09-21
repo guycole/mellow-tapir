@@ -20,12 +20,12 @@ Source files are preserved in their original formats. New revisions should be ad
 
 ## SQLite classifier data pipeline
 
-The MCP server uses a read-only SQLite file built from the editable catalog under [`tapir_classifier`](tapir_classifier).
+The MCP server uses a read-only SQLite file built from the editable catalog under [`src/tapir_schema`](src/tapir_schema).
 
 Data sources:
 
-- [`tapir_classifier/seed.json`](tapir_classifier/seed.json): authoritative editable band, emission, and channel catalog.
-- [`tapir_classifier/schema.sql`](tapir_classifier/schema.sql): reference SQL schema used for provenance and alignment with the source data model.
+- [`src/tapir_schema/seed.json`](src/tapir_schema/seed.json): authoritative editable band, emission, and channel catalog.
+- [`src/tapir_schema/schema.sql`](src/tapir_schema/schema.sql): reference SQL schema used for provenance and alignment with the source data model.
 
 Build location:
 
@@ -37,8 +37,8 @@ Build command:
 cd /Users/gsc/github/mellow-tapir/src/tapir_mcp_server
 ./venv/bin/python -m mcp_server.build_db \
 	--db-path data/tapir.sqlite \
-	--seed-path ../../tapir_classifier/seed.json \
-	--schema-path ../../tapir_classifier/schema.sql
+	--seed-path ../tapir_schema/seed.json \
+	--schema-path ../tapir_schema/schema.sql
 ```
 
 When source catalog data changes, rebuild the SQLite file with the command above and restart the MCP server.

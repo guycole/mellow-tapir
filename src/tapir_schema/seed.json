@@ -1,0 +1,453 @@
+{
+  "catalog_limits_hz": [108000000, 1000000000],
+  "bands": [
+    {
+      "lower_hz": 108000000, "upper_hz": 117975000,
+      "service_name": "Aeronautical Radionavigation", "use_name": "VOR, ILS localizer, and navigation data",
+      "channel_spacing_hz": 50000, "channel_offset_hz": 0, "priority": 90,
+      "notes": "VOR occupies most of the band; ILS localizers are concentrated at 108.10-111.95 MHz.",
+      "emissions": [
+        {"designator": "A9W", "modulation": "Composite AM navigation signal", "typical": true},
+        {"designator": "G7D", "modulation": "Phase-modulated digital navigation data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 117975000, "upper_hz": 137000000,
+      "service_name": "Aeronautical Mobile (R)", "use_name": "Civil aviation voice and data",
+      "channel_spacing_hz": 25000, "channel_offset_hz": 25000, "priority": 95,
+      "notes": "Assignable U.S. voice channels begin at 118.000 MHz. 8.33 kHz operation is not the general U.S. channel plan.",
+      "emissions": [
+        {"designator": "6K00A3E", "modulation": "AM voice", "occupied_bandwidth_hz": 6000, "typical": true},
+        {"designator": "A2D", "modulation": "AM digital data using a subcarrier", "typical": false},
+        {"designator": "G1D", "modulation": "Phase-modulated digital data", "typical": false},
+        {"designator": "G7D", "modulation": "Phase-modulated multichannel digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 137000000, "upper_hz": 138000000,
+      "service_name": "Space and Meteorological Satellite", "use_name": "Low-Earth-orbit satellite downlinks",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 75,
+      "notes": "Includes space operations, weather satellites, research, and mobile-satellite signals.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true},
+        {"designator": "G1D", "modulation": "Phase-modulated digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 138000000, "upper_hz": 144000000,
+      "service_name": "Federal Land and Aeronautical Mobile", "use_name": "U.S. Government and military communications",
+      "channel_spacing_hz": 12500, "channel_offset_hz": 0, "priority": 70,
+      "notes": "Mixed federal assignments; actual channelization and waveform vary.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "6K00A3E", "modulation": "AM voice", "occupied_bandwidth_hz": 6000, "typical": false},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 144000000, "upper_hz": 148000000,
+      "service_name": "Amateur", "use_name": "Two-meter amateur radio",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 90,
+      "notes": "Includes weak-signal, satellite, simplex, repeater, packet, and digital sub-bands.",
+      "emissions": [
+        {"designator": "16K0F3E", "modulation": "FM voice", "occupied_bandwidth_hz": 16000, "typical": true},
+        {"designator": "2K70J3E", "modulation": "Single-sideband voice", "occupied_bandwidth_hz": 2700, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 148000000, "upper_hz": 150800000,
+      "service_name": "Federal Mobile and Satellite", "use_name": "Federal land mobile and satellite operations",
+      "channel_spacing_hz": 12500, "channel_offset_hz": 0, "priority": 65,
+      "notes": "Mixed assignments; satellite segments overlap land-mobile usage.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 150800000, "upper_hz": 156247500,
+      "service_name": "Land Mobile", "use_name": "Business, public safety, railroad, paging, and telemetry",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 75,
+      "notes": "A broad mixed-use segment; narrower service and regional records can be added later.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "8K10F1E", "modulation": "Digital voice", "occupied_bandwidth_hz": 8100, "typical": false},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 156247500, "upper_hz": 157450000,
+      "service_name": "Maritime Mobile", "use_name": "Marine VHF ship and coast communications",
+      "channel_spacing_hz": 25000, "channel_offset_hz": null, "priority": 90,
+      "notes": "Ship transmit portion and simplex channels; paired coast channels continue above 160 MHz.",
+      "emissions": [
+        {"designator": "16K0G3E", "modulation": "FM or phase-modulated voice", "occupied_bandwidth_hz": 16000, "typical": true},
+        {"designator": "G2B", "modulation": "Phase-modulated signaling", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 157450000, "upper_hz": 161600000,
+      "service_name": "Land Mobile", "use_name": "Business, public safety, railroad, paging, and telemetry",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 70,
+      "notes": "Contains both land-mobile assignments and gaps associated with paired services.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 160600000, "upper_hz": 162050000,
+      "service_name": "Maritime Mobile", "use_name": "Marine VHF coast and Automatic Identification System",
+      "channel_spacing_hz": 25000, "channel_offset_hz": null, "priority": 85,
+      "notes": "Overlaps the broader land-mobile region; includes paired coast channels and AIS near 162 MHz.",
+      "emissions": [
+        {"designator": "16K0G3E", "modulation": "FM or phase-modulated voice", "occupied_bandwidth_hz": 16000, "typical": true},
+        {"designator": "16K0G1D", "modulation": "GMSK digital data", "occupied_bandwidth_hz": 16000, "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 162400000, "upper_hz": 162550001,
+      "service_name": "Meteorological Aids", "use_name": "NOAA Weather Radio",
+      "channel_spacing_hz": 25000, "channel_offset_hz": 0, "priority": 100,
+      "notes": "Seven nationwide weather broadcast channels from 162.400 through 162.550 MHz.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 162050000, "upper_hz": 174000000,
+      "service_name": "Federal and Land Mobile", "use_name": "Federal, public safety, business, paging, and telemetry",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 70,
+      "notes": "NOAA weather channels are represented as a higher-priority overlapping band.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "8K10F1E", "modulation": "Digital voice", "occupied_bandwidth_hz": 8100, "typical": false},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 174000000, "upper_hz": 216000000,
+      "service_name": "Television Broadcast", "use_name": "VHF television channels 7 through 13",
+      "channel_spacing_hz": 6000000, "channel_offset_hz": 0, "priority": 90,
+      "notes": "ATSC television channels; individual transmitters occupy 6 MHz channels.",
+      "emissions": [
+        {"designator": "5M38C7W", "modulation": "ATSC 8VSB digital television", "occupied_bandwidth_hz": 5380000, "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 216000000, "upper_hz": 220000000,
+      "service_name": "Fixed and Land Mobile", "use_name": "Telemetry, paging, and narrowband data",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 65,
+      "notes": "Includes specialized telemetry and automated maritime telecommunications uses.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true},
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 219000000, "upper_hz": 220000000,
+      "service_name": "Amateur", "use_name": "Secondary amateur data and point-to-point operation",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 60,
+      "notes": "Secondary amateur allocation overlapping fixed and land-mobile services.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 220000000, "upper_hz": 225000000,
+      "service_name": "Amateur", "use_name": "1.25-meter amateur radio",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 90,
+      "notes": "Includes weak-signal, simplex, repeater, and data operation.",
+      "emissions": [
+        {"designator": "16K0F3E", "modulation": "FM voice", "occupied_bandwidth_hz": 16000, "typical": true},
+        {"designator": "2K70J3E", "modulation": "Single-sideband voice", "occupied_bandwidth_hz": 2700, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 225000000, "upper_hz": 328600000,
+      "service_name": "Federal Aeronautical Mobile", "use_name": "Military aviation voice, data, and navigation",
+      "channel_spacing_hz": 25000, "channel_offset_hz": 0, "priority": 90,
+      "notes": "Commonly called military UHF airband despite spanning the formal VHF/UHF boundary at 300 MHz.",
+      "emissions": [
+        {"designator": "6K00A3E", "modulation": "AM voice", "occupied_bandwidth_hz": 6000, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 328600000, "upper_hz": 335400000,
+      "service_name": "Aeronautical Radionavigation", "use_name": "ILS glide slope",
+      "channel_spacing_hz": 150000, "channel_offset_hz": null, "priority": 95,
+      "notes": "Paired operationally with ILS localizer channels in the 108-112 MHz region.",
+      "emissions": [
+        {"designator": "A9W", "modulation": "Composite AM navigation signal", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 335400000, "upper_hz": 400000000,
+      "service_name": "Federal Aeronautical Mobile", "use_name": "Military aviation voice and data",
+      "channel_spacing_hz": 25000, "channel_offset_hz": null, "priority": 85,
+      "notes": "Mixed military air-ground, air-air, and support operations.",
+      "emissions": [
+        {"designator": "6K00A3E", "modulation": "AM voice", "occupied_bandwidth_hz": 6000, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 400000000, "upper_hz": 406000000,
+      "service_name": "Meteorological Aids and Satellite", "use_name": "Radiosondes, weather satellites, and space research",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 75,
+      "notes": "Mixed analog and digital telemetry.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital telemetry", "typical": true},
+        {"designator": "F2D", "modulation": "FM data using a modulating subcarrier", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 406000000, "upper_hz": 406100000,
+      "service_name": "Mobile Satellite", "use_name": "406 MHz distress beacons and ELTs",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 100,
+      "notes": "Digital distress beacon band monitored by satellite systems.",
+      "emissions": [
+        {"designator": "G1D", "modulation": "Phase-modulated digital distress data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 406100000, "upper_hz": 420000000,
+      "service_name": "Federal Fixed and Mobile", "use_name": "Government communications and telemetry",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 65,
+      "notes": "Mixed federal use with service-specific assignments.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 420000000, "upper_hz": 450000000,
+      "service_name": "Amateur", "use_name": "70-centimeter amateur radio",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 85,
+      "notes": "Amateur operation shares portions of this band with government radiolocation.",
+      "emissions": [
+        {"designator": "16K0F3E", "modulation": "FM voice", "occupied_bandwidth_hz": 16000, "typical": true},
+        {"designator": "2K70J3E", "modulation": "Single-sideband voice", "occupied_bandwidth_hz": 2700, "typical": false},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 420000000, "upper_hz": 450000000,
+      "service_name": "Federal Radiolocation", "use_name": "Government radar and radiolocation",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 55,
+      "notes": "Overlaps the secondary amateur allocation.",
+      "emissions": [
+        {"designator": "P0N", "modulation": "Unmodulated pulse radar", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 450000000, "upper_hz": 470000000,
+      "service_name": "Land Mobile", "use_name": "Business, public safety, GMRS, FRS, and telemetry",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 85,
+      "notes": "Highly channelized and locally assigned; includes both narrowband licensed systems and consumer services.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "8K10F1E", "modulation": "Digital voice", "occupied_bandwidth_hz": 8100, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 470000000, "upper_hz": 608000000,
+      "service_name": "Television Broadcast", "use_name": "UHF television channels 14 through 36",
+      "channel_spacing_hz": 6000000, "channel_offset_hz": 0, "priority": 90,
+      "notes": "ATSC broadcast television; wireless microphones may appear in locally unused channels.",
+      "emissions": [
+        {"designator": "5M38C7W", "modulation": "ATSC 8VSB digital television", "occupied_bandwidth_hz": 5380000, "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 470000000, "upper_hz": 608000000,
+      "service_name": "Low Power Auxiliary", "use_name": "Wireless microphones in available television channels",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 45,
+      "notes": "Possible only where channel availability and authorization permit; useful as a secondary classifier candidate.",
+      "emissions": [
+        {"designator": "F3E", "modulation": "FM audio", "typical": true},
+        {"designator": "F1E", "modulation": "Digital voice or audio", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 608000000, "upper_hz": 614000000,
+      "service_name": "Radio Astronomy and Wireless Medical Telemetry", "use_name": "Television channel 37 protected services",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 90,
+      "notes": "Radio astronomy sites are normally quiet; medical telemetry can appear under applicable coordination.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital telemetry", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 614000000, "upper_hz": 617000000,
+      "service_name": "600 MHz Guard Band", "use_name": "Low-power auxiliary and unlicensed guard-band devices",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 55,
+      "notes": "Narrow guard region between former television spectrum and 600 MHz mobile downlink.",
+      "emissions": [
+        {"designator": "F3E", "modulation": "FM audio", "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 617000000, "upper_hz": 652000000,
+      "service_name": "Commercial Mobile", "use_name": "600 MHz cellular downlink",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 90,
+      "notes": "Wideband LTE or 5G NR downlink blocks.",
+      "emissions": [
+        {"designator": "W7D", "modulation": "Wideband multicarrier digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 652000000, "upper_hz": 663000000,
+      "service_name": "600 MHz Duplex Gap", "use_name": "Low-power auxiliary, unlicensed microphones, and guard spectrum",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 55,
+      "notes": "Gap between 600 MHz cellular downlink and uplink blocks.",
+      "emissions": [
+        {"designator": "F3E", "modulation": "FM audio", "typical": true},
+        {"designator": "F1E", "modulation": "Digital voice or audio", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 663000000, "upper_hz": 698000000,
+      "service_name": "Commercial Mobile", "use_name": "600 MHz cellular uplink",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 90,
+      "notes": "Wideband LTE or 5G NR mobile uplink blocks.",
+      "emissions": [
+        {"designator": "W7D", "modulation": "Wideband multicarrier digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 698000000, "upper_hz": 806000000,
+      "service_name": "Commercial and Public Safety Mobile", "use_name": "700 MHz LTE, 5G, and public-safety broadband",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 85,
+      "notes": "Multiple paired and unpaired blocks; use signal bandwidth and duplex direction for finer classification.",
+      "emissions": [
+        {"designator": "W7D", "modulation": "Wideband multicarrier digital data", "typical": true},
+        {"designator": "8K10F1E", "modulation": "Digital voice", "occupied_bandwidth_hz": 8100, "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 806000000, "upper_hz": 869000000,
+      "service_name": "Land Mobile and Public Safety", "use_name": "800 MHz trunked voice and data",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 85,
+      "notes": "Includes public-safety, industrial, business, and trunked repeater inputs/outputs.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "8K10F1E", "modulation": "Digital voice", "occupied_bandwidth_hz": 8100, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 824000000, "upper_hz": 849000000,
+      "service_name": "Cellular Mobile", "use_name": "850 MHz cellular uplink",
+      "channel_spacing_hz": 30000, "channel_offset_hz": null, "priority": 90,
+      "notes": "Legacy cellular channel raster; modern LTE/5G signals occupy aggregated bandwidths.",
+      "emissions": [
+        {"designator": "W7D", "modulation": "Wideband multicarrier digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 869000000, "upper_hz": 894000000,
+      "service_name": "Cellular Mobile", "use_name": "850 MHz cellular downlink",
+      "channel_spacing_hz": 30000, "channel_offset_hz": null, "priority": 95,
+      "notes": "Usually a strong continuous wideband base-station signal in populated areas.",
+      "emissions": [
+        {"designator": "W7D", "modulation": "Wideband multicarrier digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 894000000, "upper_hz": 902000000,
+      "service_name": "Land Mobile", "use_name": "900 MHz narrowband mobile and business systems",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 75,
+      "notes": "Paired systems may have corresponding base channels above 935 MHz.",
+      "emissions": [
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": true},
+        {"designator": "8K10F1E", "modulation": "Digital voice", "occupied_bandwidth_hz": 8100, "typical": false},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 902000000, "upper_hz": 928000000,
+      "service_name": "Industrial Scientific Medical", "use_name": "Unlicensed ISM devices, LoRa, telemetry, and frequency hopping",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 90,
+      "notes": "Extremely diverse waveforms and bandwidths; observed behavior is more useful than a channel raster.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true},
+        {"designator": "G1D", "modulation": "Phase-modulated digital data", "typical": true},
+        {"designator": "W7D", "modulation": "Wideband or spread-spectrum digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 902000000, "upper_hz": 928000000,
+      "service_name": "Amateur", "use_name": "33-centimeter amateur radio",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 65,
+      "notes": "Secondary amateur allocation overlapping heavy ISM activity.",
+      "emissions": [
+        {"designator": "16K0F3E", "modulation": "FM voice", "occupied_bandwidth_hz": 16000, "typical": true},
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true}
+      ]
+    },
+    {
+      "lower_hz": 928000000, "upper_hz": 941000000,
+      "service_name": "Paging, Fixed, and Land Mobile", "use_name": "Paging, telemetry, point-to-point, and 900 MHz base systems",
+      "channel_spacing_hz": 12500, "channel_offset_hz": null, "priority": 75,
+      "notes": "Mixed narrowband signals; paging carriers can be strong and continuously active.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital paging or telemetry", "typical": true},
+        {"designator": "11K2F3E", "modulation": "Narrowband FM voice", "occupied_bandwidth_hz": 11200, "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 941000000, "upper_hz": 960000000,
+      "service_name": "Fixed and Broadcast Auxiliary", "use_name": "Studio links, telemetry, and fixed systems",
+      "channel_spacing_hz": null, "channel_offset_hz": null, "priority": 65,
+      "notes": "Signal bandwidth and local licensing patterns vary.",
+      "emissions": [
+        {"designator": "F1D", "modulation": "FM digital data", "typical": true},
+        {"designator": "F3E", "modulation": "FM audio", "typical": false}
+      ]
+    },
+    {
+      "lower_hz": 960000000, "upper_hz": 1000000001,
+      "service_name": "Aeronautical Radionavigation", "use_name": "DME, TACAN, transponders, ADS-B, and UAT segment",
+      "channel_spacing_hz": 1000000, "channel_offset_hz": 0, "priority": 95,
+      "notes": "Catalog ends at 1 GHz; the full aeronautical radionavigation allocation continues to 1215 MHz.",
+      "emissions": [
+        {"designator": "M1D", "modulation": "Pulse digital data", "typical": true},
+        {"designator": "P0N", "modulation": "Unmodulated pulse navigation signal", "typical": true}
+      ]
+    }
+  ],
+  "channels": [
+    {"center_hz": 108000000, "label": "VOR/ILS band edge", "service_name": "Aeronautical Radionavigation", "emission_designator": "A9W", "channel_spacing_hz": 50000, "notes": "Lowest navigation-band carrier."},
+    {"center_hz": 118000000, "label": "Civil aviation voice band edge", "service_name": "Aeronautical Mobile (R)", "emission_designator": "6K00A3E", "channel_spacing_hz": 25000, "notes": "First assignable civil aviation communications channel."},
+    {"center_hz": 121500000, "label": "Civil aviation emergency", "service_name": "Aeronautical Mobile (R)", "emission_designator": "A3E", "channel_spacing_hz": 25000, "notes": "International emergency and distress frequency."},
+    {"center_hz": 122750000, "label": "Fixed-wing air-to-air", "service_name": "Aeronautical Mobile", "emission_designator": "A3E", "channel_spacing_hz": 25000, "notes": "Private fixed-wing air-to-air communications."},
+    {"center_hz": 123025000, "label": "Helicopter air-to-air", "service_name": "Aeronautical Mobile", "emission_designator": "A3E", "channel_spacing_hz": 25000, "notes": "Helicopter air-to-air communications."},
+    {"center_hz": 123100000, "label": "Aviation search and rescue", "service_name": "Aeronautical Mobile", "emission_designator": "A3E", "channel_spacing_hz": 25000, "notes": "Air-air and air-ground search-and-rescue communications."},
+    {"center_hz": 136425000, "label": "Flight Information Services Broadcast", "service_name": "Aeronautical Mobile (R)", "emission_designator": "G1D", "channel_spacing_hz": 25000, "notes": "Receive-only for aircraft."},
+    {"center_hz": 136450000, "label": "Flight Information Services Broadcast", "service_name": "Aeronautical Mobile (R)", "emission_designator": "G1D", "channel_spacing_hz": 25000, "notes": "Receive-only for aircraft."},
+    {"center_hz": 136475000, "label": "Flight Information Services Broadcast", "service_name": "Aeronautical Mobile (R)", "emission_designator": "G1D", "channel_spacing_hz": 25000, "notes": "Receive-only for aircraft."},
+    {"center_hz": 145800000, "label": "Amateur satellite downlink region", "service_name": "Amateur Satellite", "emission_designator": null, "channel_spacing_hz": null, "notes": "Representative center of a commonly used amateur-satellite sub-band."},
+    {"center_hz": 156800000, "label": "Marine VHF channel 16", "service_name": "Maritime Mobile", "emission_designator": "16K0G3E", "channel_spacing_hz": 25000, "notes": "Distress, safety, and calling."},
+    {"center_hz": 161975000, "label": "AIS 1", "service_name": "Maritime Mobile", "emission_designator": "16K0G1D", "channel_spacing_hz": 25000, "notes": "Automatic Identification System channel 87B."},
+    {"center_hz": 162025000, "label": "AIS 2", "service_name": "Maritime Mobile", "emission_designator": "16K0G1D", "channel_spacing_hz": 25000, "notes": "Automatic Identification System channel 88B."},
+    {"center_hz": 162400000, "label": "NOAA Weather Radio WX2", "service_name": "Meteorological Aids", "emission_designator": "11K2F3E", "channel_spacing_hz": 25000, "notes": null},
+    {"center_hz": 162425000, "label": "NOAA Weather Radio WX4", "service_name": "Meteorological Aids", "emission_designator": "11K2F3E", "channel_spacing_hz": 25000, "notes": null},
+    {"center_hz": 162450000, "label": "NOAA Weather Radio WX5", "service_name": "Meteorological Aids", "emission_designator": "11K2F3E", "channel_spacing_hz": 25000, "notes": null},
+    {"center_hz": 162475000, "label": "NOAA Weather Radio WX3", "service_name": "Meteorological Aids", "emission_designator": "11K2F3E", "channel_spacing_hz": 25000, "notes": null},
+    {"center_hz": 162500000, "label": "NOAA Weather Radio WX6", "service_name": "Meteorological Aids", "emission_designator": "11K2F3E", "channel_spacing_hz": 25000, "notes": null},
+    {"center_hz": 162525000, "label": "NOAA Weather Radio WX7", "service_name": "Meteorological Aids", "emission_designator": "11K2F3E", "channel_spacing_hz": 25000, "notes": null},
+    {"center_hz": 162550000, "label": "NOAA Weather Radio WX1", "service_name": "Meteorological Aids", "emission_designator": "11K2F3E", "channel_spacing_hz": 25000, "notes": null},
+    {"center_hz": 243000000, "label": "Military aviation emergency", "service_name": "Federal Aeronautical Mobile", "emission_designator": "A3E", "channel_spacing_hz": 25000, "notes": "Military emergency and distress frequency."},
+    {"center_hz": 406025000, "label": "406 MHz distress beacon region", "service_name": "Mobile Satellite", "emission_designator": "G1D", "channel_spacing_hz": null, "notes": "Representative point within the 406.0-406.1 MHz beacon band, not a universal channel center."},
+    {"center_hz": 462562500, "label": "FRS/GMRS channel 1", "service_name": "Personal Radio", "emission_designator": "11K2F3E", "channel_spacing_hz": 12500, "notes": null},
+    {"center_hz": 467562500, "label": "FRS channel 8", "service_name": "Personal Radio", "emission_designator": "11K2F3E", "channel_spacing_hz": 12500, "notes": null},
+    {"center_hz": 915000000, "label": "902-928 MHz ISM center", "service_name": "Industrial Scientific Medical", "emission_designator": null, "channel_spacing_hz": null, "notes": "Common nominal center for diverse unlicensed devices."},
+    {"center_hz": 978000000, "label": "ADS-B UAT", "service_name": "Aeronautical Radionavigation", "emission_designator": "M1D", "channel_spacing_hz": 1000000, "notes": "Universal Access Transceiver data channel."}
+  ]
+}

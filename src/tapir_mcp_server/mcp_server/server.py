@@ -26,7 +26,7 @@ def create_server(config: ServerConfig) -> MCPServer:
         title="Tapir Classifier MCP",
         description=(
             "Classify RF frequencies using a read-only SQLite catalog built "
-            "from tapir_classifier seed data."
+            "from tapir_schema seed data."
         ),
         instructions=(
             "Use classify_frequency for a direct lookup. Use query_channels "

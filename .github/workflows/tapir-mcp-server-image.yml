@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "src/tapir_mcp_server/**"
-      - "tapir_classifier/**"
+      - "src/tapir_schema/**"
       - ".github/workflows/tapir-mcp-server-image.yml"
   workflow_dispatch:
 
