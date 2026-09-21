@@ -1,6 +1,6 @@
 # mellow-tapir
 
-Radio spectrum reference database and Tapir MCP server.
+Mellow-Tapir is an experimental MCP server that helps radio hobbyists explore likely services, channels, and signal types across the radio spectrum from 108 MHz to 1 GHz; it is not a frequency-coordination or regulatory-authority tool.
 
 ## Allocation references
 
