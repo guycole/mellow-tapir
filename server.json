@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.guycole/mellow-tapir",
+  "title": "Mellow Tapir Radio Spectrum Guide",
+  "description": "Explore likely radio services, channels, and emissions from 108 MHz to 1 GHz.",
+  "websiteUrl": "https://github.com/guycole/mellow-tapir",
+  "repository": {
+    "url": "https://github.com/guycole/mellow-tapir",
+    "source": "github",
+    "subfolder": "src/tapir_mcp_server"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "registryBaseUrl": "https://ghcr.io",
+      "identifier": "ghcr.io/guycole/mellow-tapir-mcp:sha-0b4818d",
+      "version": "0.1.0",
+      "runtimeHint": "docker",
+      "runtimeArguments": [
+        {
+          "type": "named",
+          "name": "--publish",
+          "value": "127.0.0.1:8080:8080",
+          "description": "Expose the container MCP endpoint on localhost port 8080."
+        }
+      ],
+      "transport": {
+        "type": "streamable-http",
+        "url": "http://127.0.0.1:8080/mcp"
+      }
+    }
+  ]
+}

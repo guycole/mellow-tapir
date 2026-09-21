@@ -3,6 +3,8 @@ FROM python:3.14-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
+LABEL io.modelcontextprotocol.server.name="io.github.guycole/mellow-tapir"
+
 WORKDIR /app
 
 COPY src/tapir_mcp_server/requirements.txt /app/requirements.txt
